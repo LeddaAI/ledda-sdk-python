@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import logging
 import re
-from typing import TYPE_CHECKING, Dict, List
+from typing import TYPE_CHECKING, Dict, List, Set
 
 if TYPE_CHECKING:
     from ledda._types import MessageDict, Prompt
@@ -51,9 +51,9 @@ def _compile_message(message: MessageDict, variables: Dict[str, str]) -> Message
     return {"role": message["role"], "content": content}
 
 
-def _extract_variables(messages: List[MessageDict]) -> set:
+def _extract_variables(messages: List[MessageDict]) -> Set[str]:
     """Extract {{var}} names from messages (fallback when variables list is empty)."""
-    found: set = set()
+    found: Set[str] = set()
     for m in messages:
         found.update(_VAR_PATTERN.findall(m.get("content", "")))
     return found
