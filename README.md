@@ -184,7 +184,7 @@ In default mode, `get_prompt()` **never raises an exception**. Every failure pat
 ```python
 ledda = Ledda(
     api_key="ldda_ak_...",
-    base_url="https://api.ledda.ai",   # default
+    base_url="https://edge.ledda.ai",  # default
     cache_ttl=60,                       # seconds, default 60
     cache_max_size=1000,                # max cached prompts, default 1000
     default_label="production",         # default environment

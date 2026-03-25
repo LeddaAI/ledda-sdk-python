@@ -40,7 +40,7 @@ __version__ = "0.0.1"
 
 logger = logging.getLogger("ledda")
 
-_DEFAULT_BASE_URL = "https://api.ledda.ai"
+_DEFAULT_BASE_URL = "https://edge.ledda.ai"
 
 
 class Ledda:
