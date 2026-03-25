@@ -7,7 +7,7 @@ Never raises — returns (data, etag, error_code, error_message) tuples.
 from __future__ import annotations
 
 import logging
-from typing import Any, Dict, Optional, Tuple, Union
+from typing import Any, Dict, Optional, Tuple
 
 import httpx
 

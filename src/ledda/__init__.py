@@ -12,9 +12,8 @@ Usage:
 from __future__ import annotations
 
 import logging
-import threading
 from concurrent.futures import ThreadPoolExecutor
-from typing import Any, Dict, List, Optional, Sequence
+from typing import Any, Dict, Optional, Sequence
 
 from ledda._cache import LRUCache
 from ledda._client import AsyncHttpClient, SyncHttpClient
